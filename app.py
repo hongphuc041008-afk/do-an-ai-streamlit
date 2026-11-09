@@ -54,7 +54,7 @@ st.markdown("""
 with st.sidebar:
     st.image("https://cdn-icons-png.flaticon.com/512/3135/3135715.png", width=70)
     st.title("⚙️ Cấu hình")
-    api_key = st.text_input("Nhập Gemini API Key:", type="password", help="Lấy API Key tại aistudio.google.com")
+    api_key = AQ.Ab8RN6KURfJs4xwcrFTXtX3J3-9_lEAl-Zbj-FnUUk9HRMAqUQ
     st.markdown("---")
     st.info("💡 **Mẹo:** Tải lên văn bản PDF dạng Nghị định, Thông tư hoặc Quyết định để AI phân tích tốt nhất.")
 
@@ -65,7 +65,7 @@ st.markdown('<div class="subtitle-text">Chuyển đổi văn bản pháp lý ph�
 # Tải file PDF
 uploaded_file = st.file_uploader("📂 Tải lên văn bản hành chính (PDF)", type=["pdf"])
 
-if uploaded_file and api_key:
+if uploaded_file:
     # Đọc PDF
     doc = fitz.open(stream=uploaded_file.read(), filetype="pdf")
     text = "".join([page.get_text() for page in doc])
