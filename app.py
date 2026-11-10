@@ -75,7 +75,7 @@ if uploaded_file:
                     {text}
                     """
                     completion = client.chat.completions.create(
-                        model="deepseek-r1-distill-llama-70b",
+                        model="qwen/qwen3.6-27b",
                         messages=[{"role": "user", "content": prompt}],
                         temperature=0.3
                     )
