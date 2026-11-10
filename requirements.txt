@@ -1,3 +1,3 @@
 streamlit
 PyMuPDF
-groq
+groq>=0.9.0
