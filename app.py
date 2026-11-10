@@ -75,7 +75,7 @@ if uploaded_file:
                     {text}
                     """
                     completion = client.chat.completions.create(
-                        model="llama-4-scout-17b-16e-instruct",
+                        model="deepseek-r1-distill-llama-70b",
                         messages=[{"role": "user", "content": prompt}],
                         temperature=0.3
                     )
