@@ -53,7 +53,7 @@ st.markdown("""
 # Thanh bên (Sidebar)
 with st.sidebar:
     st.image("https://cdn-icons-png.flaticon.com/512/3135/3135715.png", width=70)
-    st.title("⚙️ Cấu hình")
+    st.title("thích")
     api_key = "AQ.Ab8RN6I4OffZ21COppcFRvL4ohaDDiVYOigJUbNufGY5GFm_Vw"
     st.markdown("---")
     st.info("💡 **Mẹo:** Tải lên văn bản PDF dạng Nghị định, Thông tư hoặc Quyết định để AI phân tích tốt nhất.")
