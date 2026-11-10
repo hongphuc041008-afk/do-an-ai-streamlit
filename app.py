@@ -11,7 +11,7 @@ st.set_page_config(
 )
 
 # ⚠️ NHỚ DÁN GEMINI API KEY CHUẨN (BẮT ĐẦU BẰNG AIzaSy...) VÀO ĐÂY:
-API_KEY = "AIzaSyAQ.Ab8RN6IhOiWvVFbJ-p0vfHEz5HqRvZqcGYIA-HGY8jG9HNVyzA"
+API_KEY = "sk-f3361bc5c2974abcba98bb88ffb4ee96"
 
 # Custom CSS giao diện Ombre
 st.markdown("""
