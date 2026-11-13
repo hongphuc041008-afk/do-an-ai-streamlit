@@ -81,7 +81,7 @@ if uploaded_file:
                     )
                     st.markdown(f'<div class="result-card">{completion.choices[0].message.content}</div>', unsafe_allow_html=True)
                     st.toast("Đã tóm tắt xong!", icon="🎉")
-               except Exception as e:
+                except Exception as e:
                     error_message = str(e)
                     # Bắt lỗi 429 (Vượt quá giới hạn token)
                     if "429" in error_message or "Rate limit" in error_message:
