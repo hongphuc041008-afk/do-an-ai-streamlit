@@ -4,7 +4,7 @@ from groq import Groq
 
 # Cấu hình trang web (Tự động ẩn Sidebar)
 st.set_page_config(
-    page_title="Trợ Lý Pháp Lý AI",
+    page_title="INFORME",
     page_icon="⚖️",
     layout="wide",
     initial_sidebar_state="collapsed"
