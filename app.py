@@ -41,7 +41,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Giao diện chính
-st.markdown('<div class="title-text">⚖️ Trợ Lý Tinh Gọn Văn Bản Hành Chính</div>', unsafe_allow_html=True)
+st.markdown('<div class="title-text">⚖️ INFORME - Trợ Lý Tinh Gọn Văn Bản Hành Chính</div>', unsafe_allow_html=True)
 st.markdown('<div class="subtitle-text">Chuyển đổi văn bản pháp lý phức tạp thành ngôn ngữ dễ hiểu chỉ trong vài giây</div>', unsafe_allow_html=True)
 
 uploaded_file = st.file_uploader("📂 Tải lên văn bản hành chính (PDF)", type=["pdf"])
