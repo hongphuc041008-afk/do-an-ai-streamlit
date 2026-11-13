@@ -11,7 +11,7 @@ st.set_page_config(
 )
 
 # 🔑 Groq API Key của bạn
-GROQ_API_KEY = "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"
+GROQ_API_KEY = st.secrets["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"]
 
 # Custom CSS giao diện Ombre
 st.markdown("""
