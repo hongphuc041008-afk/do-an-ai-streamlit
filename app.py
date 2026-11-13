@@ -50,7 +50,8 @@ if uploaded_file:
     # Đọc PDF
     doc = fitz.open(stream=uploaded_file.read(), filetype="pdf")
     text = "".join([page.get_text() for page in doc])
-
+    text = text[:15000]
+    
     col1, col2 = st.columns(2, gap="large")
     with col1:
         st.subheader("📄 Văn bản gốc")
