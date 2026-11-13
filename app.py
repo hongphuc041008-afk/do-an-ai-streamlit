@@ -81,5 +81,18 @@ if uploaded_file:
                     )
                     st.markdown(f'<div class="result-card">{completion.choices[0].message.content}</div>', unsafe_allow_html=True)
                     st.toast("Đã tóm tắt xong!", icon="🎉")
-                except Exception as e:
-                    st.error(f"Lỗi xử lý AI: {e}")
+               except Exception as e:
+                    error_message = str(e)
+                    # Bắt lỗi 429 (Vượt quá giới hạn token)
+                    if "429" in error_message or "Rate limit" in error_message:
+                        import re
+                        # Trích xuất số giây từ chuỗi thông báo của AI
+                        match = re.search(r"try again in ([\d.]+)s", error_message)
+                        if match:
+                            wait_time = round(float(match.group(1)))
+                            st.warning(f"⏳ **Tài khoản AI đang bận xử lý (Vượt giới hạn miễn phí).**\n\nVui lòng giữ nguyên màn hình và bấm thử lại sau **{wait_time} giây** nữa nhé!")
+                        else:
+                            st.warning("⏳ **Tài khoản AI đang bận xử lý.** Vui lòng đợi khoảng **30 giây** rồi bấm nút thử lại nhé!")
+                    # Các lỗi hệ thống khác
+                    else:
+                        st.error(f"Lỗi xử lý AI: {e}")
